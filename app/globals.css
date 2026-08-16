@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --scene-ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --scene-duration: 0.9s;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden; /* the browser must never scroll */
+  background: #000;
+  color: #f5f7f5;
+  overscroll-behavior: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  html.has-custom-cursor,
+  html.has-custom-cursor * {
+    cursor: none !important;
+  }
+}
+
+.glass {
+  background: linear-gradient(
+    160deg,
+    rgba(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0.015)
+  );
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.glass-accent {
+  border: 1px solid rgba(72, 185, 74, 0.25);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.55),
+    0 0 32px rgba(72, 185, 74, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.text-gradient {
+  background: linear-gradient(180deg, #ffffff 0%, #c9d6c9 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.reflection-sweep {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.reflection-sweep::after {
+  content: "";
+  position: absolute;
+  inset: -50%;
+  background: linear-gradient(
+    115deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.12) 50%,
+    transparent 60%
+  );
+  transform: translateX(-120%);
+  transition: transform 0.8s var(--scene-ease);
+  pointer-events: none;
+}
+.reflection-sweep:hover::after {
+  transform: translateX(60%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* visible focus states for accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid #48b94a;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
