@@ -13,15 +13,15 @@ export const SCENES = [
 export type SceneId = (typeof SCENES)[number];
 
 // Scenes reachable only after authentication.
-export const LOCKED_SCENES: SceneId[] = [
-  "about",
-  "skills",
-  "workflow",
-  "experience",
-  "projects",
-  "achievements",
-  "testimonials",
-  "contact",
-];
-
+//export const LOCKED_SCENES: SceneId[] = [
+  //"about",
+  //"skills",
+  //"workflow",
+ // "experience",
+//  "projects",
+//  "achievements",
+//  "testimonials",
+//  "contact",
+//];
+export const LOCKED_SCENES: SceneId[] = [];
 export const sceneIndex = (id: SceneId) => SCENES.indexOf(id);
