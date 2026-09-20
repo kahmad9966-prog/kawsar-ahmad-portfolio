@@ -244,7 +244,7 @@ export const projects: Project[] = [
   },
   {
     id: "ember-and-lore",
-    number: "02",
+    number: "01",
     category: "shopify",
     title: "Ember & Lore",
     description: "A hand-poured candle and coffee brand storefront built for an intimate, ritual-driven shopping experience.",
@@ -349,7 +349,7 @@ export const projects: Project[] = [
   },
   {
     id: "cote-royale",
-    number: "09",
+    number: "02",
     category: "shopify",
     title: "Côte Royale",
     description: "A Mediterranean-inspired home decor brand's storefront built around timeless, artisan craftsmanship.",
