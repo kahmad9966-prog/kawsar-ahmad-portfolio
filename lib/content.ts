@@ -199,15 +199,15 @@ export const workflowSteps = [
 ];
 
 export const experiences = [
-  { id: "wp-dev", title: "WordPress Development", years: "6+ Years", detail: "140+ custom builds across agencies, startups, and direct clients." },
-  { id: "shopify-dev", title: "Shopify Development", years: "5+ Years", detail: "90+ storefronts launched with custom theming and app integration." },
-  { id: "seo", title: "Website SEO", years: "6+ Years", detail: "200+ sites optimized for organic search visibility." },
-  { id: "yt-seo", title: "YouTube SEO", years: "4+ Years", detail: "75+ channels optimized for discoverability and retention." },
-  { id: "ecom", title: "E-commerce Development", years: "5+ Years", detail: "85+ full commerce builds from catalog to checkout." },
-  { id: "speed", title: "Website Speed Optimization", years: "5+ Years", detail: "130+ sites tuned for Core Web Vitals and load time." },
-  { id: "responsive", title: "Responsive Website Design", years: "6+ Years", detail: "150+ layouts built mobile-first and device-tested." },
-  { id: "maintenance", title: "Website Maintenance", years: "6+ Years", detail: "300+ fixes delivered with fast turnaround." },
-  { id: "consult", title: "Technical Consultation", years: "5+ Years", detail: "Ongoing advisory for teams scaling their web presence." },
+  { id: "wp-dev", title: "WordPress Development", years: "2+ Years", detail: "140+ custom builds across agencies, startups, and direct clients." },
+  { id: "shopify-dev", title: "Shopify Development", years: "2+ Years", detail: "90+ storefronts launched with custom theming and app integration." },
+  { id: "seo", title: "Website SEO", years: "2+ Years", detail: "200+ sites optimized for organic search visibility." },
+  { id: "yt-seo", title: "YouTube SEO", years: "2+ Years", detail: "75+ channels optimized for discoverability and retention." },
+  { id: "ecom", title: "E-commerce Development", years: "2+ Years", detail: "85+ full commerce builds from catalog to checkout." },
+  { id: "speed", title: "Website Speed Optimization", years: "2+ Years", detail: "130+ sites tuned for Core Web Vitals and load time." },
+  { id: "responsive", title: "Responsive Website Design", years: "2+ Years", detail: "150+ layouts built mobile-first and device-tested." },
+  { id: "maintenance", title: "Website Maintenance", years: "2+ Years", detail: "300+ fixes delivered with fast turnaround." },
+  { id: "consult", title: "Technical Consultation", years: "2+ Years", detail: "Ongoing advisory for teams scaling their web presence." },
 ];
 
 export type Project = {
