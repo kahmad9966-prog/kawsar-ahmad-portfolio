@@ -212,7 +212,7 @@ export const experiences = [
 
 export type Project = {
   id: string;
-  number: string;
+  number?: string;
   category: "wordpress" | "shopify";
   title: string;
   description: string;
@@ -229,7 +229,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     id: "istanbul-medical-connect",
-    number: "01",
+    number: " ",
     category: "wordpress",
     title: "Istanbul Medical Connect",
     description: "A trust-building medical tourism site connecting Australian patients with Istanbul healthcare providers.",
@@ -244,7 +244,7 @@ export const projects: Project[] = [
   },
   {
     id: "high-altitude-partners",
-    number: "02",
+    number: " ",
     category: "wordpress",
     title: "High Altitude Partners",
     description: "A retained executive search firm's site built around transparency, flat fees, and measurable results.",
@@ -259,7 +259,7 @@ export const projects: Project[] = [
   },
   {
     id: "a-consulting",
-    number: "03",
+    number: " ",
     category: "wordpress",
     title: "A | Consulting",
     description: "A consulting, coaching, and communications firm's site built to establish authority and drive quote requests.",
@@ -274,7 +274,7 @@ export const projects: Project[] = [
   },
   {
     id: "imagic-medical",
-    number: "04",
+    number: " ",
     category: "wordpress",
     title: "iMagic Medical",
     description: "A healthcare software product site simplifying how hospitals manage and secure medical imaging data.",
@@ -289,7 +289,7 @@ export const projects: Project[] = [
   },
   {
     id: "servepoint-capital",
-    number: "05",
+    number: " ",
     category: "wordpress",
     title: "ServePoint Capital",
     description: "A strategic investment advisory site built to convey long-term discipline and quiet confidence.",
@@ -304,7 +304,7 @@ export const projects: Project[] = [
   },
   {
     id: "imad-yousef-group",
-    number: "06",
+    number: " ",
     category: "wordpress",
     title: "Imad Yousef Group",
     description: "A UAE and Saudi Arabia-based industrial equipment provider's site built around safety and reliability.",
@@ -319,7 +319,7 @@ export const projects: Project[] = [
   },
   {
     id: "hikari-kitchen",
-    number: "07",
+    number: " ",
     category: "wordpress",
     title: "Hikari Kitchen",
     description: "A Miami-based Japanese restaurant's site blending traditional aesthetics with modern online ordering.",
@@ -334,7 +334,7 @@ export const projects: Project[] = [
   },
    {
     id: "black-shado",
-    number: "08",
+    number: " ",
     category: "wordpress",
     title: "Black Shadô",
     description: "A dual-audience luxury perfume brand website split cleanly between feminine and masculine lines.",
@@ -349,7 +349,7 @@ export const projects: Project[] = [
   },
     {
     id: "relyfes",
-    number: "09",
+    number: " ",
     category: "wordpress",
     title: "Relyfes",
     description: "A multi-category online marketplace connecting buyers and sellers across electronics, furniture, and more.",
@@ -364,7 +364,7 @@ export const projects: Project[] = [
   },
   {
     id: "king-jesus-universal-ministry",
-    number: "10",
+    number: " ",
     category: "wordpress",
     title: "King Jesus Universal Ministry",
     description: "A church website built to welcome visitors, share service times, and encourage community engagement.",
@@ -379,7 +379,7 @@ export const projects: Project[] = [
   },
   {
     id: "goliath-publishing-network",
-    number: "11",
+    number: " ",
     category: "wordpress",
     title: "Goliath Publishing Network",
     description: "A B2B site for a board game publisher connecting international partners for game localization.",
@@ -394,7 +394,7 @@ export const projects: Project[] = [
   },
   {
     id: "promise-venue-wholesale",
-    number: "12",
+    number: " ",
     category: "wordpress",
     title: "Promise Venue Wholesale LLC",
     description: "A B2B wholesale distribution site for stationery, gardening equipment, and general merchandise.",
@@ -409,7 +409,7 @@ export const projects: Project[] = [
   },
   {
     id: "bluestar-electrical",
-    number: "13",
+    number: " ",
     category: "wordpress",
     title: "Bluestar Electrical LLC",
     description: "A local electrician service site built to drive service requests across Southern New Hampshire.",
@@ -426,7 +426,7 @@ export const projects: Project[] = [
 
     {
     id: "mediaone-seo-geo",
-    number: "14",
+    number: " ",
     category: "wordpress",
     title: "MediaOne — SEO & GEO",
     description: "A Singapore marketing agency site built around SEO and AI-search (GEO) visibility.",
@@ -441,7 +441,7 @@ export const projects: Project[] = [
   },
   {
     id: "mediaone-paid-media",
-    number: "15",
+    number: " ",
     category: "wordpress",
     title: "MediaOne — Paid Media",
     description: "A performance marketing page showcasing lead pipeline results and low-commitment engagement terms.",
@@ -456,7 +456,7 @@ export const projects: Project[] = [
   },
   {
     id: "the-subpoena-service",
-    number: "16",
+    number: " ",
     category: "wordpress",
     title: "The Subpoena Service, Inc.",
     description: "A professional legal support website for subpoena preparation, service, and production in California.",
@@ -471,7 +471,7 @@ export const projects: Project[] = [
   },
   {
     id: "rainfactory",
-    number: "17",
+    number: " ",
     category: "wordpress",
     title: "Rainfactory",
     description: "An irrigation products store for garden owners, landscapers, and farmers, with a multilingual setup.",
@@ -486,7 +486,7 @@ export const projects: Project[] = [
   },
   {
     id: "nord-ejendomsservice",
-    number: "18",
+    number: " ",
     category: "wordpress",
     title: "NORD Ejendomsservice",
     description: "A Danish property service company site serving housing associations and commercial properties.",
@@ -501,7 +501,7 @@ export const projects: Project[] = [
   },
   {
     id: "safari-tailor-made-experiences",
-    number: "19",
+    number: " ",
     category: "wordpress",
     title: "Safari — Tailor-Made Experiences",
     description: "A luxury travel brand site offering bespoke journeys in Morocco.",
@@ -516,7 +516,7 @@ export const projects: Project[] = [
   },
   {
     id: "trash-dash",
-    number: "20",
+    number: " ",
     category: "wordpress",
     title: "Trash Dash",
     description: "A family-owned junk removal and valet trash service site for Greater Charlotte.",
@@ -531,7 +531,7 @@ export const projects: Project[] = [
   },
   {
     id: "rheam-medical",
-    number: "21",
+    number: " ",
     category: "wordpress",
     title: "Rheam Medical",
     description: "A medical device startup site introducing a robotic trocar insertion research platform.",
@@ -549,7 +549,7 @@ export const projects: Project[] = [
   
     {
     id: "ember-and-lore",
-    number: "01",
+    number: " ",
     category: "shopify",
     title: "Ember & Lore",
     description: "A hand-poured candle and coffee brand storefront built for an intimate, ritual-driven shopping experience.",
@@ -564,7 +564,7 @@ export const projects: Project[] = [
   },
   {
     id: "cote-royale",
-    number: "02",
+    number: " ",
     category: "shopify",
     title: "Côte Royale",
     description: "A Mediterranean-inspired home decor brand's storefront built around timeless, artisan craftsmanship.",
@@ -579,7 +579,7 @@ export const projects: Project[] = [
   },
    {
     id: "amoressi",
-    number: "03",
+    number: " ",
     category: "shopify",
     title: "Amoressi",
     description: "A modern jewelry brand storefront built around mix-and-match stacking pieces.",
@@ -594,7 +594,7 @@ export const projects: Project[] = [
   },
   {
     id: "starla-marz",
-    number: "04",
+    number: " ",
     category: "shopify",
     title: "Starla Marz",
     description: "A bohemian jewelry brand storefront built around adventure, spirit, and handcrafted adornments.",
@@ -609,7 +609,7 @@ export const projects: Project[] = [
   },
   {
     id: "jubilore",
-    number: "05",
+    number: " ",
     category: "shopify",
     title: "Jubilore",
     description: "A bible-inspired streetwear brand storefront built around bold graphic storytelling.",
