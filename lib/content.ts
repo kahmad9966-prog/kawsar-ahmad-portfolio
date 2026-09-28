@@ -41,7 +41,7 @@ export const skills: Skill[] = [
     title: "WordPress Development",
     overview:
       "Custom themes, plugin architecture, and CMS builds engineered for editors and end users alike.",
-    level: "Expert · 6+ years",
+    level: "Expert · 2+ years",
     projects: 140,
     services: ["Custom theme builds", "Plugin development", "CMS structuring"],
     strengths: ["Clean PHP", "Editor-friendly UX", "Long-term maintainability"],
@@ -51,7 +51,7 @@ export const skills: Skill[] = [
     title: "Elementor Website Design",
     overview:
       "Pixel-accurate, fast-loading pages built with Elementor for teams who need to self-edit content.",
-    level: "Expert · 5+ years",
+    level: "Expert · 2+ years",
     projects: 110,
     services: ["Landing pages", "Global style systems", "Widget customization"],
     strengths: ["Design fidelity", "Speed-conscious builds", "Reusable templates"],
@@ -61,7 +61,7 @@ export const skills: Skill[] = [
     title: "WooCommerce",
     overview:
       "End-to-end WooCommerce stores — catalog structure, payments, shipping logic, and checkout optimization.",
-    level: "Advanced · 5+ years",
+    level: "Advanced · 2+ years",
     projects: 65,
     services: ["Store setup", "Payment gateways", "Checkout optimization"],
     strengths: ["Conversion-focused UX", "Inventory logic", "Secure payments"],
@@ -71,7 +71,7 @@ export const skills: Skill[] = [
     title: "Shopify Store Development",
     overview:
       "Custom Shopify themes and app integrations built to convert and scale with inventory growth.",
-    level: "Expert · 5+ years",
+    level: "Expert · 2+ years",
     projects: 90,
     services: ["Custom themes", "App integration", "Store migration"],
     strengths: ["Liquid templating", "Conversion design", "Fast storefronts"],
@@ -81,7 +81,7 @@ export const skills: Skill[] = [
     title: "Website SEO",
     overview:
       "Technical and on-page SEO that raises organic visibility without compromising design or speed.",
-    level: "Expert · 6+ years",
+    level: "Expert · 2+ years",
     projects: 200,
     services: ["Technical audits", "On-page optimization", "Keyword strategy"],
     strengths: ["Core Web Vitals", "Structured data", "Content strategy"],
@@ -91,7 +91,7 @@ export const skills: Skill[] = [
     title: "YouTube SEO",
     overview:
       "Channel and video optimization strategy that improves discoverability and watch-time retention.",
-    level: "Advanced · 4+ years",
+    level: "Advanced · 2+ years",
     projects: 75,
     services: ["Video metadata", "Channel structure", "Growth strategy"],
     strengths: ["Search intent mapping", "Retention tactics", "Analytics-driven"],
@@ -101,7 +101,7 @@ export const skills: Skill[] = [
     title: "Website Speed Optimization",
     overview:
       "Diagnosing and eliminating performance bottlenecks for consistently fast Core Web Vitals.",
-    level: "Expert · 5+ years",
+    level: "Expert · 2+ years",
     projects: 130,
     services: ["Performance audits", "Asset optimization", "Caching strategy"],
     strengths: ["Lighthouse tuning", "Image pipelines", "Render-blocking fixes"],
@@ -111,7 +111,7 @@ export const skills: Skill[] = [
     title: "Responsive Website Design",
     overview:
       "Interfaces that hold their design integrity from ultrawide monitors down to small phones.",
-    level: "Expert · 6+ years",
+    level: "Expert · 2+ years",
     projects: 150,
     services: ["Mobile-first builds", "Cross-device QA", "Adaptive layouts"],
     strengths: ["Fluid grids", "Touch-first interaction", "Device testing"],
@@ -121,7 +121,7 @@ export const skills: Skill[] = [
     title: "E-commerce Website Development",
     overview:
       "Full commerce builds across WordPress and Shopify — catalog to checkout, tuned for revenue.",
-    level: "Expert · 5+ years",
+    level: "Expert · 2+ years",
     projects: 85,
     services: ["Store architecture", "Payment integration", "Conversion tuning"],
     strengths: ["Funnel thinking", "Platform-agnostic", "Scalable structure"],
@@ -131,7 +131,7 @@ export const skills: Skill[] = [
     title: "Bug Fixing & Maintenance",
     overview:
       "Fast, precise fixes for broken sites — from plugin conflicts to critical checkout failures.",
-    level: "Expert · 6+ years",
+    level: "Expert · 2+ years",
     projects: 300,
     services: ["Emergency fixes", "Version upgrades", "Security patching"],
     strengths: ["Root-cause debugging", "Fast turnaround", "Clear reporting"],
@@ -141,7 +141,7 @@ export const skills: Skill[] = [
     title: "Website Migration",
     overview:
       "Zero-downtime migrations between hosts, platforms, and domains with SEO equity preserved.",
-    level: "Advanced · 5+ years",
+    level: "Advanced · 2+ years",
     projects: 60,
     services: ["Host migration", "Platform migration", "Domain transitions"],
     strengths: ["Redirect mapping", "Data integrity", "SEO preservation"],
@@ -151,7 +151,7 @@ export const skills: Skill[] = [
     title: "Landing Page Design",
     overview:
       "Focused, high-conversion landing pages built around a single clear call to action.",
-    level: "Expert · 5+ years",
+    level: "Expert · 2+ years",
     projects: 120,
     services: ["Campaign pages", "A/B test variants", "Copy-led layout"],
     strengths: ["Conversion copywriting", "Fast load times", "Clear hierarchy"],
@@ -161,7 +161,7 @@ export const skills: Skill[] = [
     title: "Technical Support",
     overview:
       "Ongoing, responsive support so client websites never sit broken for long.",
-    level: "Expert · 6+ years",
+    level: "Expert · 2+ years",
     projects: 250,
     services: ["Priority support", "Monitoring", "Incident response"],
     strengths: ["Fast response time", "Clear communication", "Proactive fixes"],
@@ -171,7 +171,7 @@ export const skills: Skill[] = [
     title: "Performance Optimization",
     overview:
       "System-level tuning across hosting, caching, and code to keep sites consistently fast.",
-    level: "Expert · 5+ years",
+    level: "Expert · 2+ years",
     projects: 130,
     services: ["Server tuning", "Caching layers", "Code-level profiling"],
     strengths: ["Holistic diagnostics", "Measurable results", "Stability"],
