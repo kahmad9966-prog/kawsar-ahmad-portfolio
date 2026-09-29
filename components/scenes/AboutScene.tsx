@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { owner, aboutParagraphs } from "@/lib/content";
 
 export default function AboutScene() {
@@ -62,29 +63,35 @@ export default function AboutScene() {
 
       {/* Right: visual presentation */}
       <div className="relative flex h-72 items-center justify-center sm:h-96">
-        {[0, 1, 2].map((i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, scale: 0.8, y: 30 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            transition={{ delay: 0.5 + i * 0.15, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="glass-accent absolute animate-float rounded-3xl"
-            style={{
-              width: 160 - i * 24,
-              height: 160 - i * 24,
-              left: `${20 + i * 22}%`,
-              top: `${10 + i * 18}%`,
-              animationDelay: `${i * 0.7}s`,
-              zIndex: 3 - i,
-            }}
-          />
-        ))}
-        <div className="glass relative z-10 flex h-40 w-40 items-center justify-center rounded-full text-4xl font-display font-semibold text-accent shadow-glow-md sm:h-56 sm:w-56">
-          2+
-          <span className="absolute bottom-8 text-[10px] font-body font-normal uppercase tracking-widest text-ink-faint">
-            years
-          </span>
-        </div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8, y: 30 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          className="glass-accent absolute overflow-hidden rounded-3xl"
+          style={{ width: 160, height: 160, left: "20%", top: "10%", zIndex: 3 }}
+        >
+          <Image src="/project1.jpg" alt="Project preview 1" fill className="object-cover" />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8, y: 30 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ delay: 0.65, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          className="glass-accent absolute overflow-hidden rounded-3xl"
+          style={{ width: 136, height: 136, left: "42%", top: "28%", zIndex: 2 }}
+        >
+          <Image src="/project2.jpg" alt="Project preview 2" fill className="object-cover" />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8, y: 30 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ delay: 0.8, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          className="glass-accent absolute overflow-hidden rounded-3xl"
+          style={{ width: 112, height: 112, left: "64%", top: "46%", zIndex: 1 }}
+        >
+          <Image src="/project9.jpg" alt="Project preview 3" fill className="object-cover" />
+        </motion.div>
       </div>
     </div>
   );
