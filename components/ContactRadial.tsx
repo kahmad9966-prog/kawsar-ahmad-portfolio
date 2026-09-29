@@ -15,8 +15,8 @@ type Item = {
   Icon: LucideIcon;
 };
 
-const D = 62; // desktop doori
-const M = 96; // mobile arc er radius
+const D = 52; // desktop doori
+const M = 66; // mobile arc er radius
 
 const ITEMS: Item[] = [
   {
@@ -40,7 +40,7 @@ const ITEMS: Item[] = [
     label: "Facebook",
     href: "https://www.facebook.com/share/1CKX1fD4Qu/",
     desktop: { dx: D, dy: 0 },
-    mobile: { dx: -48, dy: 83 },
+    mobile: { dx: -33, dy: 57 },
     Icon: Facebook,
   },
   {
@@ -48,12 +48,13 @@ const ITEMS: Item[] = [
     label: "LinkedIn",
     href: "https://www.linkedin.com/in/kawser-miah-91928234b/",
     desktop: { dx: 0, dy: -D },
-    mobile: { dx: -83, dy: 48 },
+    mobile: { dx: -57, dy: 33 },
     Icon: Linkedin,
   },
 ];
 
-const EDGE = 26; // screen edge theke minimum doori (px)
+const EDGE = 20; // screen edge theke minimum doori (px)
+const SIZE = 36; // icon tap area (px)
 
 export default function ContactRadial() {
   const [open, setOpen] = useState(false);
@@ -169,10 +170,12 @@ export default function ContactRadial() {
                       rel="noopener noreferrer"
                       aria-label={item.label}
                       title={item.label}
-                      className="cursor-interactive fixed z-[58] flex h-11 w-11 items-center justify-center text-green-400 transition-colors hover:text-white"
+                      className="cursor-interactive fixed z-[58] flex items-center justify-center text-green-400 transition-colors hover:text-white"
                       style={{
-                        left: center.x - 22,
-                        top: center.y - 22,
+                        width: SIZE,
+                        height: SIZE,
+                        left: center.x - SIZE / 2,
+                        top: center.y - SIZE / 2,
                         filter: "drop-shadow(0 0 6px rgba(74,222,128,0.45))",
                       }}
                       initial={{ x: 0, y: 0, scale: 0, opacity: 0 }}
@@ -198,7 +201,7 @@ export default function ContactRadial() {
                       whileHover={{ scale: 1.2 }}
                       onClick={() => setOpen(false)}
                     >
-                      <Icon size={24} strokeWidth={1.75} aria-hidden="true" />
+                      <Icon size={22} strokeWidth={1.75} aria-hidden="true" />
                     </motion.a>
                   );
                 })}
