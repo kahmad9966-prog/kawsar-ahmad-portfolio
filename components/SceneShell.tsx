@@ -44,7 +44,7 @@ export default function SceneShell({
       transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1] }}
       style={{ perspective: 1200 }}
       data-scene-scroll
-      className="absolute inset-0 flex items-center justify-center overflow-y-auto px-6 pt-80 pb-16 sm:px-10 sm:pt-24"
+      className="absolute inset-0 flex items-center justify-center overflow-y-auto px-6 pt-65 pb-16 sm:px-10 sm:pt-24"
     >
       {children}
     </motion.div>
