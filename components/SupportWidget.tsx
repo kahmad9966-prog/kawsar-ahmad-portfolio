@@ -25,7 +25,7 @@ export default function SupportWidget() {
   }, []);
 
   return (
-    <div ref={ref} className="fixed bottom-6 right-6 z-[70] flex flex-col items-center gap-2">
+    <div ref={ref} className="fixed bottom-6 right-6 z-[70] flex flex-col items-end gap-3">
       <AnimatePresence>
         {open &&
           ITEMS.map((item, i) => (
@@ -34,23 +34,21 @@ export default function SupportWidget() {
               href={item.href}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label={item.label}
-              title={item.label}
               initial={{ opacity: 0, scale: 0.4, y: 14 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.4, y: 14 }}
-              whileHover={{ scale: 1.2 }}
               transition={{
                 type: "spring",
                 stiffness: 340,
                 damping: 22,
                 delay: i * 0.05,
               }}
-              className="cursor-interactive flex h-11 w-11 items-center justify-center rounded-full text-accent transition-colors hover:text-white"
-              style={{ filter: "drop-shadow(0 0 6px rgba(74,222,128,0.45))" }}
-              onClick={() => setOpen(false)}
+              className="glass-accent cursor-interactive reflection-sweep flex items-center gap-3 rounded-full py-1.5 pl-1.5 pr-5 text-sm text-white shadow-glow-sm"
             >
-              <item.icon size={22} strokeWidth={1.75} aria-hidden="true" />
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-accent/40 bg-accent/10 text-accent">
+                <item.icon size={16} />
+              </span>
+              {item.label}
             </motion.a>
           ))}
       </AnimatePresence>
