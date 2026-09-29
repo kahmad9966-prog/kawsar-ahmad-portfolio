@@ -5,6 +5,7 @@ import { createPortal } from "react-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { Facebook, Linkedin, MessageCircle, Send } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
+import { owner } from "@/lib/content";
 
 type Item = {
   key: string;
@@ -15,14 +16,16 @@ type Item = {
   Icon: LucideIcon;
 };
 
-const D = 52; // desktop doori
-const M = 66; // mobile arc er radius
+const D = 60; // desktop doori
+const M = 80; // mobile arc er radius
+const SIZE = 38; // gol icon er size (px)
+const EDGE = 25; // screen edge theke minimum doori (px)
 
 const ITEMS: Item[] = [
   {
     key: "whatsapp",
     label: "WhatsApp",
-    href: "https://wa.me/8801975340495",
+    href: `https://wa.me/${owner.whatsapp.replace("+", "")}`,
     desktop: { dx: 0, dy: D },
     mobile: { dx: 0, dy: M },
     Icon: MessageCircle,
@@ -30,7 +33,7 @@ const ITEMS: Item[] = [
   {
     key: "telegram",
     label: "Telegram",
-    href: "https://t.me/kawsar_ahmad_999",
+    href: owner.telegram,
     desktop: { dx: -D, dy: 0 },
     mobile: { dx: -M, dy: 0 },
     Icon: Send,
@@ -38,23 +41,20 @@ const ITEMS: Item[] = [
   {
     key: "facebook",
     label: "Facebook",
-    href: "https://www.facebook.com/share/1CKX1fD4Qu/",
+    href: owner.facebook,
     desktop: { dx: D, dy: 0 },
-    mobile: { dx: -33, dy: 57 },
+    mobile: { dx: -40, dy: 69 },
     Icon: Facebook,
   },
   {
     key: "linkedin",
     label: "LinkedIn",
-    href: "https://www.linkedin.com/in/kawser-miah-91928234b/",
+    href: owner.linkedin,
     desktop: { dx: 0, dy: -D },
-    mobile: { dx: -57, dy: 33 },
+    mobile: { dx: -69, dy: 40 },
     Icon: Linkedin,
   },
 ];
-
-const EDGE = 20; // screen edge theke minimum doori (px)
-const SIZE = 36; // icon tap area (px)
 
 export default function ContactRadial() {
   const [open, setOpen] = useState(false);
@@ -97,7 +97,6 @@ export default function ContactRadial() {
     };
   }, [open, measure]);
 
-  // icon jate screen er baire na jay
   const place = (dx: number, dy: number) => {
     if (!center) return { x: dx, y: dy };
     const maxX = window.innerWidth - EDGE;
@@ -170,13 +169,12 @@ export default function ContactRadial() {
                       rel="noopener noreferrer"
                       aria-label={item.label}
                       title={item.label}
-                      className="cursor-interactive fixed z-[58] flex items-center justify-center text-green-400 transition-colors hover:text-white"
+                      className="glass-accent cursor-interactive fixed z-[58] flex items-center justify-center rounded-full text-accent shadow-glow-sm backdrop-blur-md transition-colors hover:text-white"
                       style={{
                         width: SIZE,
                         height: SIZE,
                         left: center.x - SIZE / 2,
                         top: center.y - SIZE / 2,
-                        filter: "drop-shadow(0 0 6px rgba(74,222,128,0.45))",
                       }}
                       initial={{ x: 0, y: 0, scale: 0, opacity: 0 }}
                       animate={{
@@ -198,10 +196,10 @@ export default function ContactRadial() {
                         opacity: 0,
                         transition: { duration: 0.15 },
                       }}
-                      whileHover={{ scale: 1.2 }}
+                      whileHover={{ scale: 1.12 }}
                       onClick={() => setOpen(false)}
                     >
-                      <Icon size={22} strokeWidth={1.75} aria-hidden="true" />
+                      <Icon size={18} strokeWidth={1.75} aria-hidden="true" />
                     </motion.a>
                   );
                 })}
