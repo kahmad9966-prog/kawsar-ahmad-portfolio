@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, User, LogOut } from "lucide-react";
 import { SceneId } from "@/lib/scenes";
 import clsx from "clsx";
+import ContactRadial from "./ContactRadial";
 
 type NavItem = { label: string; scene: SceneId };
 
@@ -28,14 +29,13 @@ export default function Header({
   isAuthenticated,
   displayName,
   onNavigate,
-  onOpenLogin,
   onLogout,
 }: {
   activeScene: SceneId;
   isAuthenticated: boolean;
   displayName?: string | null;
   onNavigate: (scene: SceneId) => void;
-  onOpenLogin: () => void;
+  onOpenLogin?: () => void; // ekhon ar use hoy na, tobe page.tsx theke pass korle error hobe na
   onLogout: () => void;
 }) {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -119,7 +119,7 @@ export default function Header({
           </div>
         </nav>
 
-        {/* Right: user */}
+        {/* Right: user / contact */}
         <div className="relative">
           {isAuthenticated ? (
             <>
@@ -156,13 +156,7 @@ export default function Header({
               </AnimatePresence>
             </>
           ) : (
-            <button
-              onClick={onOpenLogin}
-              className="cursor-interactive flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-ink-dim transition-colors hover:border-accent/40 hover:text-accent"
-              aria-label="Login"
-            >
-              <User size={16} />
-            </button>
+            <ContactRadial />
           )}
         </div>
       </div>
