@@ -80,7 +80,7 @@ export default function AboutScene() {
           />
         ))}
         <div className="glass relative z-10 flex h-40 w-40 items-center justify-center rounded-full text-4xl font-display font-semibold text-accent shadow-glow-md sm:h-56 sm:w-56">
-          6+
+          2+
           <span className="absolute bottom-8 text-[10px] font-body font-normal uppercase tracking-widest text-ink-faint">
             years
           </span>
