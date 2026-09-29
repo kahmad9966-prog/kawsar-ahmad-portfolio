@@ -56,6 +56,17 @@ export function useSceneController(isAuthenticated: boolean) {
     const onWheel = (e: WheelEvent) => {
       if (locked) return;
       if (Math.abs(e.deltaY) < 12) return;
+
+      const target = e.target as HTMLElement;
+      const scrollable = target.closest("[data-scene-scroll]") as HTMLElement | null;
+      if (scrollable) {
+        const atTop = scrollable.scrollTop <= 1;
+        const atBottom =
+          scrollable.scrollTop + scrollable.clientHeight >= scrollable.scrollHeight - 1;
+        if (e.deltaY > 0 && !atBottom) return;
+        if (e.deltaY < 0 && !atTop) return;
+      }
+
       step(e.deltaY > 0 ? 1 : -1);
     };
 
@@ -74,7 +85,25 @@ export function useSceneController(isAuthenticated: boolean) {
       if (touchStartY.current === null || locked) return;
       const dy = touchStartY.current - e.changedTouches[0].clientY;
       const dx = (touchStartX.current ?? 0) - e.changedTouches[0].clientX;
+
       if (Math.abs(dy) > Math.abs(dx) && Math.abs(dy) > 60) {
+        const target = e.target as HTMLElement;
+        const scrollable = target.closest("[data-scene-scroll]") as HTMLElement | null;
+        if (scrollable) {
+          const atTop = scrollable.scrollTop <= 1;
+          const atBottom =
+            scrollable.scrollTop + scrollable.clientHeight >= scrollable.scrollHeight - 1;
+          if (dy > 0 && !atBottom) {
+            touchStartY.current = null;
+            touchStartX.current = null;
+            return;
+          }
+          if (dy < 0 && !atTop) {
+            touchStartY.current = null;
+            touchStartX.current = null;
+            return;
+          }
+        }
         step(dy > 0 ? 1 : -1);
       }
       touchStartY.current = null;
