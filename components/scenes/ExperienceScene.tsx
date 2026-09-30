@@ -11,7 +11,7 @@ export default function ExperienceScene() {
         Where the work has paid off
       </h2>
 
-      <div className="mt-12 grid w-full grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-12 grid w-full grid-cols-1 gap-5 pt-6 sm:grid-cols-2 sm:pt-0 lg:grid-cols-3">
         {experiences.map((exp, i) => (
           <motion.div
             key={exp.id}
