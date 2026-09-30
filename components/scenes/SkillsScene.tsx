@@ -27,14 +27,14 @@ export default function SkillsScene() {
   const activeSkill = skills[active];
 
   return (
-    <div className="flex w-full max-w-6xl flex-col items-center">
-      <span className="mb-2 text-xs uppercase tracking-[0.25em] text-accent">Skills</span>
-      <h2 className="font-display text-3xl font-semibold text-white sm:text-4xl">
+    <div className="flex w-full max-w-6xl flex-col items-start">
+      <span className="mb-2 text-left text-xs uppercase tracking-[0.25em] text-accent">Skills</span>
+      <h2 className="text-left font-display text-3xl font-semibold text-white sm:text-4xl">
         What I bring to a project
       </h2>
 
       <div
-        className="relative mt-14 h-[280px] w-full max-w-3xl"
+        className="relative mt-14 h-[280px] w-full max-w-3xl self-center"
         style={{ perspective: 1400 }}
         onWheel={onWheel}
       >
@@ -86,7 +86,7 @@ export default function SkillsScene() {
         </motion.div>
       </div>
 
-      <div className="mt-10 flex items-center gap-2">
+      <div className="mt-10 flex items-center gap-2 self-center">
         {skills.map((_, i) => (
           <button
             key={i}
