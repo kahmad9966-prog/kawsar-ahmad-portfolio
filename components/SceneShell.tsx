@@ -42,9 +42,12 @@ export default function SceneShell({
       animate="center"
       exit="exit"
       transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1] }}
-      style={{ perspective: 1200 }}
+      style={{
+        perspective: 1200,
+        paddingTop: "calc(var(--header-h, 88px) + 32px)",
+      }}
       data-scene-scroll
-      className="absolute inset-0 flex items-center justify-center overflow-y-auto px-6 pt-32 pb-16 sm:px-10 sm:pt-24"
+      className="absolute inset-0 flex items-center justify-center overflow-y-auto px-6 pb-16 sm:px-10"
     >
       {children}
     </motion.div>
