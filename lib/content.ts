@@ -545,6 +545,22 @@ export const projects: Project[] = [
     features: ["Plain-language product summary", "Research prototype notice", "Contact CTA"],
   },
 
+    {
+    id: "feriehjem",
+    number: " ",
+    category: "wordpress",
+    title: "FerieHjem",
+    description: "A Danish vacation-home rental management site offering a transparent, flat-rate service.",
+    services: ["Custom Design", "Conversion Design", "SEO"],
+    tech: ["WordPress", "Elementor"],
+    image: "/project27.png",
+    liveUrl: "#",
+    overview: "A trust-driven site helping Danish summer-house owners estimate rental income and get started quickly.",
+    challenges: "Owners needed a fast, transparent way to see what they'd actually earn compared to typical agencies.",
+    solutions: "Built an interactive earnings calculator comparing FerieHjem's flat 17.5% rate against a typical 30% agency cut.",
+    features: ["Interactive earnings calculator", "Fee comparison bar chart", "Dual booking/consultation CTAs"],
+  },
+
     // ───────────── Shopify projects start here ─────────────
   
     {
