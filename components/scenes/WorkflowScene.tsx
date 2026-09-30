@@ -5,9 +5,9 @@ import { workflowSteps } from "@/lib/content";
 
 export default function WorkflowScene() {
   return (
-    <div className="flex w-full max-w-6xl flex-col items-center">
-      <span className="mb-2 text-xs uppercase tracking-[0.25em] text-accent">How it works</span>
-      <h2 className="font-display text-3xl font-semibold text-white sm:text-4xl">
+    <div className="flex w-full max-w-6xl flex-col items-start md:items-center">
+      <span className="mb-2 text-left text-xs uppercase tracking-[0.25em] text-accent md:text-center">How it works</span>
+      <h2 className="text-left font-display text-3xl font-semibold text-white sm:text-4xl md:text-center">
         A predictable process, every time
       </h2>
 
