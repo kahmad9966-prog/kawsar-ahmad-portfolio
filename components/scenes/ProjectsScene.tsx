@@ -38,14 +38,14 @@ export default function ProjectsScene() {
   };
 
   return (
-    <div className="flex w-full max-w-6xl flex-col items-center">
-      <span className="mb-2 text-xs uppercase tracking-[0.25em] text-accent">Featured Projects</span>
-      <h2 className="font-display text-3xl font-semibold text-white sm:text-4xl">
+    <div className="flex w-full max-w-6xl flex-col items-start">
+      <span className="mb-2 text-left text-xs uppercase tracking-[0.25em] text-accent">Featured Projects</span>
+      <h2 className="text-left font-display text-3xl font-semibold text-white sm:text-4xl">
         Recent work, in motion
       </h2>
 
       <div
-        className="relative mt-12 h-[420px] w-full max-w-4xl"
+        className="relative mt-12 h-[420px] w-full max-w-4xl self-center"
         style={{ perspective: 1600 }}
         onMouseEnter={() => setHovering(true)}
         onMouseLeave={() => setHovering(false)}
@@ -128,7 +128,7 @@ export default function ProjectsScene() {
         </motion.div>
       </div>
 
-      <div className="mt-8 flex items-center gap-2">
+      <div className="mt-8 flex items-center gap-2 self-center">
         {filtered.map((_, i) => (
           <button
             key={i}
@@ -141,7 +141,7 @@ export default function ProjectsScene() {
         ))}
       </div>
 
-      <div className="mt-8 flex gap-3">
+      <div className="mt-8 flex gap-3 self-center">
         {(["wordpress", "shopify"] as const).map((cat) => (
           <button
             key={cat}
