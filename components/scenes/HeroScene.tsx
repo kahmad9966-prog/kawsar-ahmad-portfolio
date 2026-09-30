@@ -67,7 +67,7 @@ export default function HeroScene({
         ))}
       </div>
 
-      <motion.div
+    {/*  <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.7, duration: 0.6 }}
@@ -83,7 +83,7 @@ export default function HeroScene({
             </GlassButton>
           </>
         )}
-      </motion.div>
+      </motion.div>  */}
 
       <motion.p
         initial={{ opacity: 0 }}
