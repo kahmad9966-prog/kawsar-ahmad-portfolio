@@ -47,9 +47,11 @@ export default function SceneShell({
         paddingTop: "calc(var(--header-h, 88px) + 32px)",
       }}
       data-scene-scroll
-      className="absolute inset-0 flex items-center justify-center overflow-y-auto px-6 pb-16 sm:px-10"
+      className="absolute inset-0 flex overflow-y-auto px-6 pb-16 sm:px-10"
     >
-      {children}
+      <div className="m-auto flex w-full items-center justify-center">
+        {children}
+      </div>
     </motion.div>
   );
 }
