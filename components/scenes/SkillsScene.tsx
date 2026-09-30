@@ -27,9 +27,9 @@ export default function SkillsScene() {
   const activeSkill = skills[active];
 
   return (
-    <div className="flex w-full max-w-6xl flex-col items-start">
-      <span className="mb-2 text-left text-xs uppercase tracking-[0.25em] text-accent">Skills</span>
-      <h2 className="text-left font-display text-3xl font-semibold text-white sm:text-4xl">
+    <div className="flex w-full max-w-6xl flex-col items-start md:items-center">
+      <span className="mb-2 text-left text-xs uppercase tracking-[0.25em] text-accent md:text-center">Skills</span>
+      <h2 className="text-left font-display text-3xl font-semibold text-white sm:text-4xl md:text-center">
         What I bring to a project
       </h2>
 
