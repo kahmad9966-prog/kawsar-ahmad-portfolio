@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, User, LogOut } from "lucide-react";
 import { SceneId } from "@/lib/scenes";
@@ -40,6 +40,19 @@ export default function Header({
 }) {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [userMenuOpen, setUserMenuOpen] = useState(false);
+  const headerRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const el = headerRef.current;
+    if (!el) return;
+    const setVar = () => {
+      document.documentElement.style.setProperty("--header-h", `${el.offsetHeight}px`);
+    };
+    setVar();
+    const observer = new ResizeObserver(setVar);
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   const handleNavClick = (scene: SceneId) => {
     setDropdownOpen(false);
@@ -47,7 +60,10 @@ export default function Header({
   };
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 flex justify-center px-4 pt-4 sm:pt-6">
+    <header
+      ref={headerRef}
+      className="fixed inset-x-0 top-0 z-50 flex justify-center px-4 pt-4 sm:pt-6"
+    >
       <div className="glass flex w-full max-w-5xl items-center justify-between rounded-full px-5 py-3 sm:px-8">
         {/* Logo */}
         <button
