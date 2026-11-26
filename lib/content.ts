@@ -568,7 +568,7 @@ export const projects: Project[] = [
     description: "Since 2005, Tad has been delivering high-end bathroom renovations with a focus on craftsmanship",
     services: ["Custom Design", "Conversion Design", "SEO"],
     tech: ["WordPress", "Elementor"],
-    image: "/project27.png",
+    image: "/project42.webp",
     liveUrl: "#",
     overview: "A trust-driven site helping Danish summer-house owners estimate rental income and get started quickly.",
     challenges: "Owners needed a fast, transparent way to see what they'd actually earn compared to typical agencies.",
